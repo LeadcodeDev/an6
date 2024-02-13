@@ -67,5 +67,12 @@
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": {
+    "extends": "@adonisjs/prettier-config",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "jsxSingleQuote": true,
+    "semi": false
+  }
 }
