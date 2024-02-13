@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": "./",
     "outDir": "./build",
+    "lib": ["esnext", "dom"],
     "paths": {
       "#apps/*": ["./apps/*"],
       "#domains/*": ["./domains/*"],
@@ -21,7 +22,7 @@
       "#database/*": ["./database/*.js"],
       "#tests/*": ["./tests/*.js"],
       "#start/*": ["./start/*.js"],
-      "#config/*": ["./config/*.js"],
+      "#config/*": ["./config/*.js"]
     },
     "jsx": "react",
     "jsxFactory": "Html.createElement",
