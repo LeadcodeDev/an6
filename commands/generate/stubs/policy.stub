@@ -1,0 +1,25 @@
+{{#var modelName = generators.modelName(name)}}
+{{#var modelFileName = generators.modelFileName(name)}}
+{{#var policyName = generators.policyName(name)}}
+{{#var policyFileName = generators.policyFileName(name)}}
+{{{
+  exports({
+    to: app.makePath("domains", domain, "policies" , policyFileName)
+  })
+}}}
+import User from '#domains/accounts/models/user'
+import {{ modelName }} from '#domains/{{ domain }}/models/{{ modelFileName.replace('.ts', '')}}'
+import { BasePolicy } from '@adonisjs/bouncer'
+import { AuthorizerResponse } from '@adonisjs/bouncer/types'
+
+export default class {{ policyName }} extends BasePolicy {
+  async before(user: User | null, action: string, ...params: any[]) {}
+
+  view(user: User, model: {{ modelName }}): AuthorizerResponse {}
+
+  create(user: User): AuthorizerResponse {}
+
+  edit(user: User, model: {{ modelName }}): AuthorizerResponse {}
+
+  delete(user: User, model: {{ modelName }}): AuthorizerResponse {}
+}

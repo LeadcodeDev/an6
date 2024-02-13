@@ -1,0 +1,16 @@
+{{#var modelName = generators.modelName(name)}}
+{{#var modelFileName = generators.modelFileName(name)}}
+{{#var serviceName = generators.serviceName(name)}}
+{{#var serviceFileName = generators.serviceFileName(name)}}
+{{{
+  exports({
+    to: app.makePath("domains", domain, "services" , serviceFileName)
+  })
+}}}
+import {{ modelName }} from '#domains/{{ domain }}/models/{{ modelFileName.replace('.ts', '')}}'
+
+export default class {{ serviceName }} {
+  async paginate(limit: number, itemPerPage: number) {}
+
+  async getById(id: {{ modelName }}['id']) {}
+}
