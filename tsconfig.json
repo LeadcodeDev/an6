@@ -4,6 +4,8 @@
     "rootDir": "./",
     "outDir": "./build",
     "paths": {
+      "#apps/*": ["./apps/*"],
+      "#domains/*": ["./domains/*"],
       "#controllers/*": ["./app/controllers/*.js"],
       "#exceptions/*": ["./app/exceptions/*.js"],
       "#models/*": ["./app/models/*.js"],
@@ -21,5 +23,13 @@
       "#start/*": ["./start/*.js"],
       "#config/*": ["./config/*.js"],
     },
-  },
+    "jsx": "react",
+    "jsxFactory": "Html.createElement",
+    "jsxFragmentFactory": "Html.Fragment",
+    "plugins": [
+      {
+        "name": "@kitajs/ts-html-plugin"
+      }
+    ]
+  }
 }
