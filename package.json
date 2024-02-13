@@ -38,16 +38,19 @@
     "@adonisjs/eslint-config": "^1.2.1",
     "@adonisjs/prettier-config": "^1.2.1",
     "@adonisjs/tsconfig": "^1.2.1",
+    "@iconify/json": "^2.2.182",
     "@japa/assert": "^2.1.0",
     "@japa/plugin-adonisjs": "^3.0.0",
     "@japa/runner": "^3.1.1",
     "@swc/core": "^1.3.107",
     "@types/node": "^20.11.10",
+    "@unocss/preset-icons": "^0.58.5",
     "eslint": "^8.56.0",
     "pino-pretty": "^10.3.1",
     "prettier": "^3.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
+    "unocss": "^0.58.5",
     "vite": "^5.0.12"
   },
   "dependencies": {
@@ -60,6 +63,7 @@
     "@adonisjs/vite": "^2.0.2",
     "@kitajs/html": "^3.1.2",
     "@kitajs/ts-html-plugin": "^1.3.4",
+    "@unocss/reset": "^0.58.5",
     "@vinejs/vine": "^1.7.1",
     "edge.js": "^6.0.1",
     "reflect-metadata": "^0.2.1"

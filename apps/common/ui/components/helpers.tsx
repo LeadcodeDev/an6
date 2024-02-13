@@ -2,6 +2,10 @@ import vite from '@adonisjs/vite/services/main'
 import router from '@adonisjs/core/services/router'
 import { HttpContext } from '@adonisjs/core/http'
 
+export async function Fragment(props: any) {
+  return Html.contentsToString([props.children])
+}
+
 export function route(...args: Parameters<typeof router.makeUrl>) {
   return router.makeUrl(...args)
 }
