@@ -1,5 +1,9 @@
+import ApplicationLayout from '#apps/common/ui/layouts/application_layout'
+
 export default function Home(): JSX.Element {
   return (
-    <p>Hello World !</p>
+    <ApplicationLayout>
+      <p>Hello World !</p>
+    </ApplicationLayout>
   )
 }
