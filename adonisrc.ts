@@ -72,7 +72,7 @@ export default defineConfig({
   },
   metaFiles: [
     {
-      pattern: 'apps/**/views/**/*.tsx',
+      pattern: 'apps/**/domains/**/*.tsx',
       reloadServer: false,
     },
     {

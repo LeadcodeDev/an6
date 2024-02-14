@@ -14,7 +14,7 @@ export default defineConfig({
       /**
        * Paths to watch and reload the browser on file change
        */
-      reload: ['apps/**/views/**/*.tsx'],
+      reload: ['apps/**/domains/**/*.tsx'],
     }),
     unocss({
       content: {

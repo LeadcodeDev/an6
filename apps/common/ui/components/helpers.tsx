@@ -6,6 +6,10 @@ export async function Fragment(props: any) {
   return Html.contentsToString([props.children])
 }
 
+export function httpContext() {
+  return HttpContext.getOrFail()
+}
+
 export function route(...args: Parameters<typeof router.makeUrl>) {
   return router.makeUrl(...args)
 }
