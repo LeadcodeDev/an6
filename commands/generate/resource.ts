@@ -6,9 +6,9 @@ import { join } from 'node:path'
 const STUBS_ROOT = new URL('./stubs', import.meta.url)
 
 export default class GenerateModuleBase extends BaseCommand {
-  static commandName = 'generate:module'
-  static aliases = ['g:module']
-  static description = 'Generate a module declaration'
+  static commandName = 'generate:resource'
+  static aliases = ['g:resource']
+  static description = 'Generate new resource'
 
   static options: CommandOptions = {}
 
