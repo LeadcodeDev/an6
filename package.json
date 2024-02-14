@@ -76,7 +76,8 @@
     "bracketSameLine": false,
     "bracketSpacing": true,
     "arrowParens": "always",
-    "jsxSingleQuote": true,
+    "jsxSingleQuote": false,
+    "singleQuote": true,
     "semi": false
   }
 }

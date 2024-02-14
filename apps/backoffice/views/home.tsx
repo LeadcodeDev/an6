@@ -1,9 +1,9 @@
-import ApplicationLayout from '#apps/common/ui/layouts/application_layout'
+import Layout from '#apps/backoffice/views/layouts/layout'
 
 export default function Home(): JSX.Element {
   return (
-    <ApplicationLayout>
-      <p>Hello World !</p>
-    </ApplicationLayout>
+    <Layout>
+      <p class="text-4xl">Hello World !</p>
+    </Layout>
   )
 }
