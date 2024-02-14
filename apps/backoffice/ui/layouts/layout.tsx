@@ -1,7 +1,7 @@
 import { PropsWithChildren } from '@kitajs/html'
-import ApplicationLayout from '#apps/common/ui/layouts/application_layout.js'
-import { classNames } from '#apps/common/ui/utils.js'
-import { httpContext } from '#apps/common/ui/components/helpers.js'
+import ApplicationLayout from '#apps/common/ui/layouts/application_layout'
+import { classNames } from '#apps/common/ui/utils'
+import { httpContext, route } from '#apps/common/ui/components/helpers'
 
 type Item = {
   title: string
@@ -10,27 +10,27 @@ type Item = {
   exact: boolean
 }
 
-const items: Item[] = [
-  {
-    title: 'Home',
-    icon: 'i-radix-icons-home',
-    href: '/console',
-    exact: true,
-  },
-]
-
 export default function Layout(props: PropsWithChildren): JSX.Element {
+  const items: Item[] = [
+    {
+      title: 'Home',
+      icon: 'i-radix-icons-home',
+      href: route('console.home'),
+      exact: true,
+    },
+  ]
+
   return (
     <ApplicationLayout>
       <div class="w-screen min-h-screen flex">
-        <Sidebar />
+        <Sidebar items={items} />
         <div class="pl-14 w-full bg-[#E2E9F3]">{props.children}</div>
       </div>
     </ApplicationLayout>
   )
 }
 
-function Sidebar() {
+function Sidebar(props: { items: Item[]}) {
   return (
     <div class="fixed top-0 left-0 h-full w-14 bg-white border-r border-gray-200">
       <div class="flex flex-col">
@@ -38,7 +38,7 @@ function Sidebar() {
           Icon
         </div>
         <div class="">
-          {items.map((item) => (
+          {props.items.map((item) => (
             <Link item={item} />
           ))}
         </div>

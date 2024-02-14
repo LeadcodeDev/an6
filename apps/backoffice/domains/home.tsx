@@ -1,5 +1,5 @@
-import Layout from '#apps/backoffice/ui/layouts/layout.js'
-import { httpContext } from '#apps/common/ui/components/helpers.js'
+import Layout from '#apps/backoffice/ui/layouts/layout'
+import { httpContext } from '#apps/common/ui/components/helpers'
 
 export default function Home(): JSX.Element {
   const context = httpContext()
