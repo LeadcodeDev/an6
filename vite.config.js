@@ -9,13 +9,17 @@ export default defineConfig({
        * Entrypoints of your application. Each entrypoint will
        * result in a separate bundle.
        */
-      entrypoints: [],
+      entrypoints: ['apps/common/ui/scripts/app.ts'],
 
       /**
        * Paths to watch and reload the browser on file change
        */
       reload: ['apps/**/views/**/*.tsx'],
     }),
-    unocss(),
+    unocss({
+      content: {
+        filesystem: ['apps/**/*.tsx'],
+      },
+    }),
   ],
 })
