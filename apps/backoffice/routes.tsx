@@ -7,9 +7,20 @@ router
   .group(() => {
     router.get('/', async () => <Home />).as('home')
 
-    router.group(() => {
-      router.get('/accounts/users', [UsersController, 'index']).as('dashboard')
-    })
+    router
+      .group(() => {
+        router
+          .group(() => {
+            router
+              .get('', [UsersController, 'index'])
+              .as('dashboard')
+              .as('index')
+          })
+          .prefix('users')
+          .as('users')
+      })
+      .prefix('accounts')
+      .as('accounts')
   })
   .prefix('console')
   .as('console')

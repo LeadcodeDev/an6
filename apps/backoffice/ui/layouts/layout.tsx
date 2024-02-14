@@ -18,6 +18,12 @@ export default function Layout(props: PropsWithChildren): JSX.Element {
       href: route('console.home'),
       exact: true,
     },
+    {
+      title: 'Home',
+      icon: 'i-radix-icons-person',
+      href: route('console.accounts.users.index'),
+      exact: false,
+    },
   ]
 
   return (
@@ -30,7 +36,7 @@ export default function Layout(props: PropsWithChildren): JSX.Element {
   )
 }
 
-function Sidebar(props: { items: Item[]}) {
+function Sidebar(props: { items: Item[] }) {
   return (
     <div class="fixed top-0 left-0 h-full w-14 bg-white border-r border-gray-200">
       <div class="flex flex-col">
@@ -60,7 +66,7 @@ function Link(props: { item: Item }): JSX.Element {
         href={props.item.href}
         class={classNames(
           'flex items-center justify-center w-full h-full aspect-square rounded-md',
-          isActive ? 'bg-blue-400 text-white' : 'bg-white hover:bg-blue-300'
+          isActive ? 'bg-blue-400 text-white' : 'bg-white hover:bg-blue-300',
         )}
       >
         <i class={classNames('radix-icon', props.item.icon)}></i>
