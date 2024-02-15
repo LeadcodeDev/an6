@@ -34,7 +34,7 @@ export default defineConfig({
     () => import('@adonisjs/vite/vite_provider'),
     () => import('@adonisjs/shield/shield_provider'),
     () => import('@adonisjs/static/static_provider'),
-    () => import('@adonisjs/lucid/database_provider')
+    () => import('@adonisjs/lucid/database_provider'),
   ],
 
   /*
@@ -45,7 +45,12 @@ export default defineConfig({
   | List of modules to import before starting the application.
   |
   */
-  preloads: [() => import('#start/routes'), () => import('#apps/backoffice/routes'), () => import('#start/kernel')],
+  preloads: [
+    () => import('#start/routes'),
+    () => import('#apps/accounts/users/routes'),
+    () => import('#apps/common/routes'),
+    () => import('#start/kernel')
+  ],
 
   /*
   |--------------------------------------------------------------------------

@@ -10,7 +10,7 @@ type Item = {
   exact: boolean
 }
 
-export default function Layout(props: PropsWithChildren): JSX.Element {
+export default function AdminLayout(props: PropsWithChildren): JSX.Element {
   const items: Item[] = [
     {
       title: 'Home',

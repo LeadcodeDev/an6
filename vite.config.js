@@ -9,12 +9,12 @@ export default defineConfig({
        * Entrypoints of your application. Each entrypoint will
        * result in a separate bundle.
        */
-      entrypoints: ['apps/common/ui/scripts/app.ts'],
+      entrypoints: ['apps/common/ui/app.ts'],
 
       /**
        * Paths to watch and reload the browser on file change
        */
-      reload: ['apps/**/domains/**/*.tsx'],
+      reload: ['apps/**/*.tsx'],
     }),
     unocss({
       content: {

@@ -12,7 +12,7 @@ export default function ApplicationLayout(props: PropsWithChildren) {
 
           <title>BoringMoney</title>
 
-          <Vite.Entrypoint entrypoints={['apps/common/ui/scripts/app.ts']} />
+          <Vite.Entrypoint entrypoints={['apps/common/app.ts']} />
         </head>
         <body>{props.children}</body>
       </html>
