@@ -6,18 +6,10 @@ router
   .group(() => {
     router
       .group(() => {
-        router
-          .group(() => {
-            router
-              .get('', [UsersController, 'index'])
-              .as('dashboard')
-              .as('index')
-          })
-          .prefix('users')
-          .as('users')
+        router.get('', [UsersController, 'index']).as('index')
       })
-      .prefix('accounts')
-      .as('accounts')
+      .prefix('users')
+      .as('users')
   })
-  .prefix('console')
-  .as('console')
+  .prefix('console/accounts')
+  .as('console.accounts')

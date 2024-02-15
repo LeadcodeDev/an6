@@ -7,6 +7,7 @@ type Item = {
   title: string
   icon: string
   href: string
+  match?: string
   exact: boolean
 }
 
@@ -22,6 +23,7 @@ export default function AdminLayout(props: PropsWithChildren): JSX.Element {
       title: 'Home',
       icon: 'i-radix-icons-person',
       href: route('console.accounts.users.index'),
+      match: '/console/accounts',
       exact: false,
     },
   ]
@@ -58,7 +60,7 @@ function Link(props: { item: Item }): JSX.Element {
 
   const isActive = props.item.exact
     ? context.route?.pattern === props.item.href
-    : context.route?.pattern.startsWith(props.item.href)
+    : context.route?.pattern.startsWith(props.item.match ?? props.item.href)
 
   return (
     <div class="p-2 flex h-14 w-14 items-center justify-center">

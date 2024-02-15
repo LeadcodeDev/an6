@@ -48,8 +48,9 @@ export default defineConfig({
   preloads: [
     () => import('#start/routes'),
     () => import('#apps/accounts/users/routes'),
+    () => import('#apps/accounts/roles/routes'),
     () => import('#apps/common/routes'),
-    () => import('#start/kernel')
+    () => import('#start/kernel'),
   ],
 
   /*
