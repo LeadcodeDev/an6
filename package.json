@@ -81,6 +81,7 @@
     "arrowParens": "always",
     "jsxSingleQuote": false,
     "singleQuote": true,
-    "semi": false
+    "semi": false,
+    "printWidth": 120
   }
 }
