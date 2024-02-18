@@ -3,7 +3,7 @@ import AdminPageNavigation from '#apps/common/ui/components/admin/admin_page_nav
 import { accountNavigationLinks } from '#apps/accounts/config'
 import Container from '#apps/common/ui/components/admin/container'
 import User from '#apps/accounts/users/models/user'
-import { PaginateResource } from '#apps/common/types/helper.js'
+import { PaginateResource } from '#apps/common/types/helper'
 
 type Props = {
   users: PaginateResource<User>
